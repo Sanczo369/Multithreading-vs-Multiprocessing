@@ -11,3 +11,29 @@ Once the program is started, it should calculate the time taken to perform the f
 - four threads;
 - four processes;
 - processes, the number of which depends on the number of available processors in the system.
+
+## The Task
+The task of the program is to calculate
+$$f(n)=\sum_{i=1}^n i \$$
+
+
+
+for each of the following numbers:
+
+15972490, 80247910, 92031257, 75940266,  
+97986012, 87599664, 75231321, 11138524,  
+68870499, 11872796, 79132533, 40649382,  
+63886074, 53146293, 36914087, 62770938.  
+
+## Report in HTML format containing:
+1. Basic information about the test environment:
+1. Python language version (python_version function from the platform module),
+2. Interpreter name (python_implementation function from the platform module),
+3. Interpreter version (version variable from the sys module),
+4. Operating system (system function from the platform module),
+5. Operating system version (release function from the platform module),
+6. Processor (processor function from the platform module),
+7. Number of processors (cpu_count function from the os module),
+2. Execution times of each task for each thread and process variant in a table (times rounded to three decimal places),
+3. Medians of execution times from each thread and process variant in a table (times rounded to three decimal places),
+4. Name and surname of the author of the testing program.
