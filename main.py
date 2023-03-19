@@ -50,13 +50,13 @@ def main():
     for i in range(0, 5):
         executionTime = timeit.timeit(lambda: oneThread(number), number=1)
         tab_1t.append(executionTime)
-    med_1w = sorted(tab_1t)
+    med_1t = sorted(tab_1t)
 
     # for 4 thread
     for i in range(0, 5):
         executionTime = timeit.timeit(lambda: fourThread(number), number=1)
         tab_4t.append(executionTime)
-    med_4w = sorted(tab_4t)
+    med_4t = sorted(tab_4t)
 
     # for 4 process
     for i in range(0, 5):
@@ -68,7 +68,7 @@ def main():
     for i in range(0, 5):
         executionTime = timeit.timeit(lambda: maxProcess(number), number=1)
         tab_max_p.append(executionTime)
-    med_max = sorted(tab_max_p)
+    med_max_p = sorted(tab_max_p)
 
 
     # HTML
