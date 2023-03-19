@@ -2,8 +2,25 @@ import os
 import platform
 import sys
 
+# funkcja sumujaca
+def sumFunction(number):
+    sum = 0
+    for i in range(0, int(number)):
+        sum += i
+
 
 def main():
+    number = [15972490, 80247910, 92031257, 75940266,
+              97986012, 87599664, 75231321, 11138524,
+              68870499, 11872796, 79132533, 40649382,
+              63886074, 53146293, 36914087, 62770938]
+
+    # time tables
+    tab_1t = []
+    tab_4t = []
+    tab_4p = []
+    tab_max_p = []
+
     # HTML
     html = f"""
         <!DOCTYPE html>
