@@ -146,42 +146,42 @@ def main():
 
           <tr>
             <td>1</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(tab_1t[0], '.3f'))}</td>
+            <td>{str(format(tab_4t[0], '.3f'))}</td>
+            <td>{str(format(tab_4p[0], '.3f'))}</td>
+            <td>{str(format(tab_max_p[0], '.3f'))}</td>
           </tr>
 
           <tr>
             <td>2</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(tab_1t[1], '.3f'))}</td>
+            <td>{str(format(tab_4t[1], '.3f'))}</td>
+            <td>{str(format(tab_4p[1], '.3f'))}</td>
+            <td>{str(format(tab_max_p[1], '.3f'))}</td>
           </tr>
 
           <tr>
             <td>3</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(tab_1t[2], '.3f'))}</td>
+            <td>{str(format(tab_4t[2], '.3f'))}</td>
+            <td>{str(format(tab_4p[2], '.3f'))}</td>
+            <td>{str(format(tab_max_p[2], '.3f'))}</td>
           </tr>
 
           <tr>
             <td>4</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(tab_1t[3], '.3f'))}</td>
+            <td>{str(format(tab_4t[3], '.3f'))}</td>
+            <td>{str(format(tab_4p[3], '.3f'))}</td>
+            <td>{str(format(tab_max_p[3], '.3f'))}</td>
           </tr>
 
           <tr>
             <td>5</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(tab_1t[4], '.3f'))}</td>
+            <td>{str(format(tab_4t[4], '.3f'))}</td>
+            <td>{str(format(tab_4p[4], '.3f'))}</td>
+            <td>{str(format(tab_max_p[4], '.3f'))}</td>
           </tr>
 
         </table>
@@ -199,10 +199,10 @@ def main():
 
           <tr>
             <td>Median:</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
+            <td>{str(format(med_1t[2], '.3f'))}</td>
+            <td>{str(format(med_4t[2], '.3f'))}</td>
+            <td>{str(format(med_4p[2], '.3f'))}</td>
+            <td>{str(format(med_max_p[2], '.3f'))}</td>
           </tr>
 
         </table>
