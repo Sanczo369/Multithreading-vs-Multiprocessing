@@ -1,13 +1,38 @@
 import os
 import platform
 import sys
+import timeit
+from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 
-# funkcja sumujaca
+# sum function
 def sumFunction(number):
     sum = 0
     for i in range(0, int(number)):
         sum += i
 
+# function for 1 thread
+def oneThread(number):
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        executor.map(sumFunction, number)
+
+
+# function for 4 threads
+def fourThread(number):
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        executor.map(sumFunction, number)
+
+
+# function for 4 process
+def fourProcess(number):
+    with ProcessPoolExecutor(max_workers=4) as pool:
+        pool.map(sumFunction, number)
+
+
+# function for max process
+def maxProcess(number):
+    with ProcessPoolExecutor(max_workers=os.cpu_count()) as pool:
+        pool.map(sumFunction, number)
 
 def main():
     number = [15972490, 80247910, 92031257, 75940266,
@@ -20,6 +45,31 @@ def main():
     tab_4t = []
     tab_4p = []
     tab_max_p = []
+
+    # for 1 thread
+    for i in range(0, 5):
+        executionTime = timeit.timeit(lambda: oneThread(number), number=1)
+        tab_1t.append(executionTime)
+    med_1w = sorted(tab_1t)
+
+    # for 4 thread
+    for i in range(0, 5):
+        executionTime = timeit.timeit(lambda: fourThread(number), number=1)
+        tab_4t.append(executionTime)
+    med_4w = sorted(tab_4t)
+
+    # for 4 process
+    for i in range(0, 5):
+        executionTime = timeit.timeit(lambda: fourProcess(number), number=1)
+        tab_4p.append(executionTime)
+    med_4p = sorted(tab_4p)
+
+    # for max process
+    for i in range(0, 5):
+        executionTime = timeit.timeit(lambda: maxProcess(number), number=1)
+        tab_max_p.append(executionTime)
+    med_max = sorted(tab_max_p)
+
 
     # HTML
     html = f"""
